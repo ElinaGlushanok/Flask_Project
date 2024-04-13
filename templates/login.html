@@ -4,17 +4,17 @@
 <h1>Вход в аккаунт</h1>
 <form action="" method="post">
     {{ form.hidden_tag() }}
-        {{ form.name.label }}<br>
-        {{ form.name(class="form-control", type="name") }}<br>
-        {% for error in form.name.errors %}
+        {{ form.surname.label }}<br>
+        {{ form.surname(class="form-control", type="surname") }}<br>
+        {% for error in form.surname.errors %}
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
         {% endfor %}
 
-        {{ form.surname.label }}<br>
-        {{ form.surname(class="form-control", type="surname") }}<br>
-        {% for error in form.surname.errors %}
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control", type="name") }}<br>
+        {% for error in form.name.errors %}
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{%block content %}
+<h1>Добавление заказа</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+        {{ form.person.label }} <br>
+        {{ form.person(class="form-control", type="person") }}
+        {% for error in form.person.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
+
+        {{ form.job.label }} <br>
+        {{ form.job(class="form-control", type="job") }}
+        {% for error in form.job.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
+
+        {{ form.pause.label }} <br>
+        {{ form.pause(class="form-control", type="work_size") }}
+        {% for error in form.pause.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
+
+        {{ form.meal.label }} <br>
+        {{ form.meal(class="form-control", type="meal") }}
+        {% for error in form.meal.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
+
+        {{ form.status.label }} <br>
+        {{ form.status(class="form-control", type="finished") }}
+        {% for error in form.status.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
+
+    {{ form.submit(type="submit", class="btn btn-primary") }}
+    {{message}}
+</form>
+{% endblock %}

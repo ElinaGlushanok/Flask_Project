@@ -12,6 +12,7 @@ from flask_restful import Api
 from flask import request, Flask, render_template, redirect, abort, make_response, jsonify
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
+from forms.order import AddOrderForm
 from forms.user import RegisterForm
 
 application = Flask(__name__)
@@ -77,6 +78,20 @@ def register():
         db_sess.commit()
         return redirect('/login')
     return render_template('register.html', title='Форма регистрации', form=form)
+
+
+@application.route('/addorder', methods=['GET', 'POST'])
+def new_job():
+    add_form = AddOrderForm()
+    if add_form.validate_on_submit():
+        db_sess = db_session.create_session()
+        orders = PersonalOrder(person=add_form.person.data, meal=add_form.meal.data, pause=add_form.pause.data,
+                               status=add_form.status.data, is_finished=add_form.is_finished.data,
+                               category=add_form.category.data)
+        db_sess.add(orders)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('new_order.html', title='Создание заказа', form=add_form)
 
 
 def main():

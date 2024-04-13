@@ -9,4 +9,4 @@ class PersonalOrder(SqlAlchemyBase):
     person = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("users.id"))
     meal = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     pause = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)  #номер перемены
-    status = sqlalchemy.Column(sqlalchemy.Boolean)
+    status = sqlalchemy.Column(sqlalchemy.Boolean, default=False)

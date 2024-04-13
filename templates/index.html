@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<meta charset="UTF-8">
+<h2 align="center">{{title}}</h2>
+{% for order in orders %}
+<h3>Заказ # {{ order.id }}</h3>
+<div class="table_container">
+    <table class="table">
+        <tr class="my_row">
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Человек</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Состав заказа</td>
+            <td class="title" width="150px" bgcolor="#dddddd" align="center">Стоимость</td>
+            <td class="title" width="150" bgcolor="#dddddd" align="center">Состояния</td>
+        </tr>
+        <tr class="my_row">
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.person }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.meal }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.work_size }} рублей</td>
+            {% if order.status %}
+            <td class="ordinary" bgcolor="#eeffee" align="center">Отдан</td>
+            {% else %}
+            <td class="ordinary" bgcolor="#ffeeff" align="center">Не отдан</td>
+            {% endif %}
+        </tr>
+    </table>
+</div>
+<br>
+{% endfor %}
+{% endblock %}

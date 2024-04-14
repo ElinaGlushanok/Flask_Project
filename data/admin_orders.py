@@ -1,8 +1,11 @@
 import sqlalchemy
+from flask_login import UserMixin
+from sqlalchemy_serializer import SerializerMixin
+
 from .db_session import SqlAlchemyBase
 
 
-class AdminOrder(SqlAlchemyBase):
+class AdminOrder(SqlAlchemyBase, UserMixin, SerializerMixin):
     __tablename__ = 'admin_order'
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)

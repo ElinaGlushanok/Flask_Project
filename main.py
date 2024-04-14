@@ -5,6 +5,7 @@ from data.users import User
 from data.orders import PersonalOrder
 
 from forms.login_form import LoginForm
+from forms.new_order import NewOrderForm
 
 from data import db_session
 
@@ -77,6 +78,19 @@ def register():
         db_sess.commit()
         return redirect('/login')
     return render_template('register.html', title='Форма регистрации', form=form)
+
+
+@application.route('/add_order', methods=['GET', 'POST'])
+def new_order():
+    add_form = NewOrderForm()
+    if add_form.validate_on_submit():
+        db_sess = db_session.create_session()
+        orders = PersonalOrder(person=add_form.person.data, meal=add_form.meal.data, pause=add_form.pause.data,
+                               status=add_form.status.data, is_finished=add_form.is_finished.data)
+        db_sess.add(orders)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('new_order.html', title='Создание заказа', form=add_form)
 
 
 def main():

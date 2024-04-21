@@ -48,9 +48,8 @@ def login():
 @application.route("/index")
 def index():
     db_sess = db_session.create_session()
-    orders = {order.id: (order.person, order.meal, order.pause, order.status)
-              for order in db_sess.query(PersonalOrder).all()}
-    return render_template("index.html", orders=orders, title='Заказы') #[order.person][0]
+    orders = [order for order in db_sess.query(PersonalOrder).all()]
+    return render_template("index.html", orders=orders, title='Заказы')
 
 
 @application.route('/logout')

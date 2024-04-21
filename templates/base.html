@@ -14,8 +14,9 @@
             <a class="navbar-brand" href="/logout">{{ current_user.name }}
                 {{ current_user.surname }} {{ current_user.grade}}</a>
           {% else %}
-            <a class="btn btn-primary " href="/register">Register</a>
-            <a class="btn btn-success" href="/login">Log in</a>
+            <a class="btn btn-primary " href="/register_user">Зарегистрировать ученика</a>
+            <a class="btn btn-primary " href="/register_admin">Зарегистрировать админа</a>
+            <a class="btn btn-success" href="/login">Войти</a>
           {% endif %}
       </nav>
         <a class="navbar-brand" href="#">Вкусно</a>

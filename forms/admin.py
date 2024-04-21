@@ -3,10 +3,11 @@ from wtforms import PasswordField, StringField, SubmitField, IntegerField
 from wtforms.validators import DataRequired
 
 
-class RegisterForm(FlaskForm):
+class RegisterAdminForm(FlaskForm):
     password = PasswordField('Пароль', validators=[DataRequired()])
     password_again = PasswordField('Повторите пароль', validators=[DataRequired()])
     surname = StringField('Фамилия', validators=[DataRequired()])
     name = StringField('Имя', validators=[DataRequired()])
-    grade = StringField('Класс', validators=[DataRequired()])
+    key_word = StringField('Код', validators=[DataRequired()])
     submit = SubmitField('Зарегистрироваться')
+

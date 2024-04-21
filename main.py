@@ -1,6 +1,5 @@
 import requests
 
-from data.db_session import create_session
 from data.users import User
 from data.orders import PersonalOrder
 
@@ -14,6 +13,7 @@ from flask import request, Flask, render_template, redirect, abort, make_respons
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 from forms.user import RegisterForm
+from forms.login_admin_form import LoginAdminForm
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -21,6 +21,7 @@ application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 login_manager = LoginManager()
 login_manager.init_app(application)
+keyword = 'qwerty'
 
 
 @login_manager.user_loader
@@ -60,7 +61,7 @@ def logout():
 
 
 @application.route('/register', methods=['GET', 'POST'])
-def register():
+def register_user():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
@@ -71,7 +72,30 @@ def register():
                                       User.grade == form.grade.data).first():
             return render_template('register.html', title='Регистрация', form=form,
                                    message="Такой пользователь уже есть")
-        user = User(name=form.name.data, surname=form.surname.data, grade=form.grade.data)
+        user = User(name=form.name.data, surname=form.surname.data, grade=form.grade.data, admin=False)
+        user.set_password(form.password.data)
+        db_sess.add(user)
+        db_sess.commit()
+        return redirect('/login')
+    return render_template('register.html', title='Форма регистрации', form=form)
+
+
+@application.route('/register', methods=['GET', 'POST'])
+def register_admin():
+    form = LoginAdminForm()
+    if form.validate_on_submit():
+        global key_word
+        if form.password.data != form.password_again.data:
+            return render_template('register.html', title='Регистрация', form=form, message="Пароли не совпадают")
+        if form.key_word.data != key_word:
+            return render_template('register.html', title='Регистрация', form=form, message="Неверное кодовое слово")
+        db_sess = db_session.create_session()
+        if db_sess.query(User).filter(User.surname == form.surname.data,
+                                      User.name == form.name.data,
+                                      User.grade == form.grade.data).first():
+            return render_template('register.html', title='Регистрация', form=form,
+                                   message="Такой пользователь уже есть")
+        user = User(name=form.name.data, surname=form.surname.data, grade=form.grade.data, admin=True)
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()

@@ -14,6 +14,7 @@ class User(SqlAlchemyBase, UserMixin, SerializerMixin):
     surname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     grade = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    admin = sqlalchemy.Column(sqlalchemy.Boolean, nullable=False, default=False)
 
     def set_password(self, password):
         self.password = generate_password_hash(password)

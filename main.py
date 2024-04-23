@@ -13,7 +13,7 @@ from flask import request, Flask, render_template, redirect, abort, make_respons
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 from forms.user import RegisterForm
-from forms.login_admin_form import LoginAdminForm
+from forms.admin import RegisterAdminForm
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -60,47 +60,49 @@ def logout():
     return redirect("/")
 
 
-@application.route('/register', methods=['GET', 'POST'])
+@application.route('/register_user', methods=['GET', 'POST'])
 def register_user():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Регистрация', form=form, message="Пароли не совпадают")
+            return render_template('register_user.html', title='Регистрация', form=form, message="Пароли не совпадают")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.surname == form.surname.data,
                                       User.name == form.name.data,
                                       User.grade == form.grade.data).first():
-            return render_template('register.html', title='Регистрация', form=form,
+            return render_template('register_user.html', title='Регистрация', form=form,
                                    message="Такой пользователь уже есть")
         user = User(name=form.name.data, surname=form.surname.data, grade=form.grade.data, admin=False)
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
         return redirect('/login')
-    return render_template('register.html', title='Форма регистрации', form=form)
+    return render_template('register_user.html', title='Форма регистрации', form=form)
 
 
-@application.route('/register', methods=['GET', 'POST'])
+@application.route('/register_admin', methods=['GET', 'POST'])
 def register_admin():
-    form = LoginAdminForm()
+    form = RegisterAdminForm()
     if form.validate_on_submit():
-        global key_word
+        global keyword
         if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Регистрация', form=form, message="Пароли не совпадают")
-        if form.key_word.data != key_word:
-            return render_template('register.html', title='Регистрация', form=form, message="Неверное кодовое слово")
+            return render_template('register_admin.html',
+                                   title='Регистрация', form=form, message="Пароли не совпадают")
+        if form.key_word.data != keyword:
+            return render_template('register_admin.html',
+                                   title='Регистрация', form=form, message="Неверное кодовое слово")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.surname == form.surname.data,
                                       User.name == form.name.data,
-                                      User.grade == form.grade.data).first():
-            return render_template('register.html', title='Регистрация', form=form,
+                                      User.grade == '-').first():
+            return render_template('register_admin.html', title='Регистрация', form=form,
                                    message="Такой пользователь уже есть")
-        user = User(name=form.name.data, surname=form.surname.data, grade=form.grade.data, admin=True)
+        user = User(name=form.name.data, surname=form.surname.data, grade='-', admin=True)
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
         return redirect('/login')
-    return render_template('register.html', title='Форма регистрации', form=form)
+    return render_template('register_admin.html', title='Форма регистрации', form=form)
 
 
 @application.route('/add_order', methods=['GET', 'POST'])

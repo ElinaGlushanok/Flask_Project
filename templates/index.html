@@ -11,21 +11,23 @@
 {% endif %}
 
 {% for order in orders %}
-<h3>Заказ # {{ order.id }}</h3>
+<h3>Заказ #{{ order[0] }}</h3>
 
 <div class="table_container">
     <table class="table">
         <tr class="my_row">
-            <td class="title" width="200px" bgcolor="#dddddd" align="center">id покупателя</td>
-            <td class="title" width="200px" bgcolor="#dddddd" align="center">Состав заказа</td>
-            <td class="title" width="150px" bgcolor="#dddddd" align="center">Стоимость</td>
-            <td class="title" width="150" bgcolor="#dddddd" align="center">Состояние</td>
+            <td class="title" width="150px" bgcolor="#dddddd" align="center">id покупателя</td>
+            <td class="title" width="300px" bgcolor="#dddddd" align="center">Состав заказа</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Стоимость</td>
+            <td class="title" width="150px" bgcolor="#dddddd" align="center">Номер перемены</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Состояние</td>
         </tr>
         <tr class="my_row">
-            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.person }}</td>
-            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.meal }}</td>
-            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order.work_size }} рублей</td>
-            {% if order.status %}
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order[1] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order[2] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order[3] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ order[4] }} руб.</td>
+            {% if order[5] %}
             <td class="ordinary" bgcolor="#eeffee" align="center">Отдан</td>
             {% else %}
             <td class="ordinary" bgcolor="#ffeeff" align="center">Не отдан</td>

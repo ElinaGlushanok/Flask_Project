@@ -28,6 +28,7 @@ con = sqlite3.connect("db/canteen.db")
 cur = con.cursor()
 menu = list(cur.execute(f'''select * from menu''').fetchall())
 meals_available = [x[1] for x in menu]
+prices = {x[1]: x[2] for x in menu}
 
 
 @login_manager.user_loader
@@ -55,8 +56,18 @@ def login():
 @application.route("/index")
 def index():
     db_sess = db_session.create_session()
-    orders = [order for order in db_sess.query(PersonalOrder).all()]
+    data = [order for order in db_sess.query(PersonalOrder).all()]
+    orders = []
+    for elem in data:
+        summ = 0
+        meal_count = {}
+        for name_count in elem.meal.split(', '):
+            meal_count[name_count.split('-')[0]] = int(name_count.split('-')[1])
+            summ += prices[name_count.split('-')[0]] * int(name_count.split('-')[1])
+        orders.append([elem.id, elem.person, ', \n'.join([f'{x} {y} (шт./порц.)' for x, y in meal_count.items()]),
+                       summ, elem.pause, elem.status])
     return render_template("index.html", orders=orders, title='Заказы')
+# same
 
 
 @application.route('/logout')
@@ -118,7 +129,6 @@ def new_order():
         try:
             meals_ordered = add_form.meal.data.split(', ')
             meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
-            print(meals)
             for i in meals.keys():
                 if i not in meals_available:
                     raise ValueError

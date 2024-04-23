@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, SubmitField, IntegerField
+from wtforms import PasswordField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
@@ -10,4 +10,3 @@ class RegisterAdminForm(FlaskForm):
     name = StringField('Имя', validators=[DataRequired()])
     key_word = StringField('Код', validators=[DataRequired()])
     submit = SubmitField('Зарегистрироваться')
-

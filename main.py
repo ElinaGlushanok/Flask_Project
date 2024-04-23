@@ -1,4 +1,5 @@
 import requests
+import sqlite3
 
 from data.users import User
 from data.orders import PersonalOrder
@@ -22,6 +23,11 @@ application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(application)
 keyword = 'qwerty'
+
+con = sqlite3.connect("db/canteen.db")
+cur = con.cursor()
+menu = list(cur.execute(f'''select * from menu''').fetchall())
+meals_available = [x[1] for x in menu]
 
 
 @login_manager.user_loader
@@ -109,11 +115,25 @@ def register_admin():
 def new_order():
     add_form = NewOrderForm()
     if add_form.validate_on_submit():
-        db_sess = db_session.create_session()
-        orders = PersonalOrder(person=add_form.person.data, meal=add_form.meal.data, pause=add_form.pause.data)
-        db_sess.add(orders)
-        db_sess.commit()
-        return redirect('/')
+        try:
+            meals_ordered = add_form.meal.data.split(', ')
+            meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
+            print(meals)
+            for i in meals.keys():
+                if i not in meals_available:
+                    raise ValueError
+            db_sess = db_session.create_session()
+            orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data, pause=add_form.pause.data)
+            db_sess.add(orders)
+            db_sess.commit()
+            return redirect('/')
+        except ValueError:
+            return render_template('new_order.html', title='Создание заказа',
+                                   form=add_form, message="Пожалуйста, вводите влюда только из меню")
+        except Exception:
+            return render_template('new_order.html',
+                                   title='Создание заказа', form=add_form, message="Неверный формат ввода блюд")
+
     return render_template('new_order.html', title='Создание заказа', form=add_form, status=False)
 
 

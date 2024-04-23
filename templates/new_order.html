@@ -4,15 +4,8 @@
 <h1>Добавление заказа</h1>
 <form action="" method="post">
     {{ form.hidden_tag() }}
-        {{ form.person.label }} <br>
-        {{ form.person(class="form-control", type="person") }}
-        {% for error in form.person.errors %}
-        <p class="alert alert-danger" role="alert">
-            {{ error }}
-        </p>
-        {% endfor %}
-
         {{ form.pause.label }} <br>
+
         {{ form.pause(class="form-control", type="pause") }}
         {% for error in form.pause.errors %}
         <p class="alert alert-danger" role="alert">
@@ -28,9 +21,9 @@
         </p>
         {% endfor %}
 
-        {{ status }} <br>
-
+    <br>
     {{ form.submit(type="submit", class="btn btn-primary") }}
     {{message}}
+
 </form>
 {% endblock %}

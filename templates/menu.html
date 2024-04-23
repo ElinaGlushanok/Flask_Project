@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<meta charset="UTF-8">
+<h2 align="center">{{title}}</h2>
+
+<div class="table_container">
+    <table class="table">
+        <tr class="my_row">
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">id блюда</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Название блюда</td>
+            <td class="title" width="150px" bgcolor="#dddddd" align="center">Стоимость блюда</td>
+        </tr>
+        {% for meal in meals %}
+        <tr class="my_row">
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[0] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[1] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[2] }} руб.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<br>
+{% endblock %}

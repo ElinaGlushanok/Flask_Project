@@ -137,6 +137,11 @@ def new_order():
     return render_template('new_order.html', title='Создание заказа', form=add_form, status=False)
 
 
+@application.route("/show_menu")
+def show_menu():
+    return render_template("menu.html", meals=menu, title='Меню')
+
+
 def main():
     db_session.global_init("db/canteen.db")
     application.run()

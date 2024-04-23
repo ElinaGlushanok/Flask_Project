@@ -3,12 +3,18 @@
 {% block content %}
 <meta charset="UTF-8">
 <h2 align="center">{{title}}</h2>
+
+{% if current_user.is_authenticated %}
+    <a href="add_order" class="btn btn-secondary">Создать заказ</a>
+{% endif %}
+
 {% for order in orders %}
 <h3>Заказ # {{ order.id }}</h3>
+
 <div class="table_container">
     <table class="table">
         <tr class="my_row">
-            <td class="title" width="200px" bgcolor="#dddddd" align="center">id ученика</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">id покупателя</td>
             <td class="title" width="200px" bgcolor="#dddddd" align="center">Состав заказа</td>
             <td class="title" width="150px" bgcolor="#dddddd" align="center">Стоимость</td>
             <td class="title" width="150" bgcolor="#dddddd" align="center">Состояния</td>

@@ -143,6 +143,12 @@ def show_menu():
 
 
 def main():
+    api_url = 'https://random.imagecdn.app/v1/image?width=500&height=150&category=food&format=json'
+    photo = requests.get(api_url).json()
+    img_data = requests.get(photo['url']).content
+    with open('static/img/photo.jpg', 'wb') as handler:
+        handler.write(img_data)
+        handler.close()
     db_session.global_init("db/canteen.db")
     application.run()
 

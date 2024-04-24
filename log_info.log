@@ -71,3 +71,190 @@
 2024-04-24 17:49:22,514 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2024-04-24 17:49:22,514 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:10:35,653 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:10:35,653 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:10:48,807 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:48] "GET / HTTP/1.1" 200 -
+2024-04-24 18:10:49,302 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-04-24 18:10:49,469 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:49] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:10:49,784 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:49] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:10:50,101 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-24 18:10:52,910 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:52] "GET /login HTTP/1.1" 200 -
+2024-04-24 18:10:53,193 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:10:53,224 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:53] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:10:53,535 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:10:53] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:09,858 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:09] "POST /login HTTP/1.1" 200 -
+2024-04-24 18:11:10,155 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:11:10,188 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:10] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:10,500 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:10] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:38,578 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-24 18:11:38,789 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:38] "GET / HTTP/1.1" 200 -
+2024-04-24 18:11:39,112 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:11:39,113 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:39] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:39,381 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:39] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:40,829 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:40] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 18:11:41,133 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:11:41,147 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:41,464 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:52,522 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:52] "[32mPOST /add_order HTTP/1.1[0m" 302 -
+2024-04-24 18:11:52,835 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:52] "GET / HTTP/1.1" 200 -
+2024-04-24 18:11:53,160 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:11:53,162 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:53] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:11:53,424 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:11:53] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:12:40,449 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:40] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:12:40,783 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:40] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:12:40,784 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:12:41,041 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:12:57,561 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:57] "GET / HTTP/1.1" 200 -
+2024-04-24 18:12:57,571 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:12:57,881 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:57] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:12:58,196 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:58] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:12:59,801 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:12:59] "GET /show_menu HTTP/1.1" 200 -
+2024-04-24 18:13:00,096 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:13:00,127 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:00] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:13:00,436 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:00] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:13:04,508 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:04] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:13:04,543 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:13:04,845 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:04] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:13:05,158 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:13:05] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:14,298 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:14:14,298 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:14:15,063 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:15] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:14:15,577 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:14:15,741 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:15] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:14:16,052 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:16] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:19,013 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:19] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:14:19,025 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:19] "GET / HTTP/1.1" 200 -
+2024-04-24 18:14:19,264 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:14:19,342 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:19] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:19,653 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:19] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:33,672 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:33] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 18:14:33,976 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:14:33,992 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:33] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:34,306 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:34] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:39,154 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:39] "[32mPOST /add_order HTTP/1.1[0m" 302 -
+2024-04-24 18:14:39,459 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:39] "GET / HTTP/1.1" 200 -
+2024-04-24 18:14:39,782 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:14:39,783 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:39] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:14:40,045 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:14:40] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:26,356 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:15:26,356 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:15:28,937 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:28] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 18:15:29,559 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:15:29,666 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:29] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:15:29,673 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:29] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:35,173 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:35] "[32mPOST /add_order HTTP/1.1[0m" 302 -
+2024-04-24 18:15:35,187 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:35] "GET / HTTP/1.1" 200 -
+2024-04-24 18:15:35,430 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:15:35,508 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:35] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:35,822 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:35] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:41,353 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:41] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:15:41,695 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:15:41,696 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:41,945 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:44,877 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:44] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:15:45,196 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:45] "GET / HTTP/1.1" 200 -
+2024-04-24 18:15:45,536 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:15:45,536 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:45] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:15:45,790 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:15:45] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:17:57,289 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:17:57,289 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:17:57,363 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:17:57] "GET / HTTP/1.1" 200 -
+2024-04-24 18:17:58,160 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:17:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:17:58,168 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:17:58] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:17:58,172 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:17:58] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:01,444 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:01] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:18:01,458 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:18:01,681 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:01] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:01,994 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:01] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:04,472 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:04] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:18:04,781 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:04] "GET / HTTP/1.1" 200 -
+2024-04-24 18:18:05,108 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:18:05,110 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:05] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:05,357 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:05] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:46,170 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:18:46,170 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:18:46,288 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:46] "GET / HTTP/1.1" 200 -
+2024-04-24 18:18:47,091 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:18:47,097 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:47] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:18:47,102 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:47] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:50,819 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:50] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:18:51,080 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:51] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:18:51,110 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:18:51,406 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:51] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:51,410 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:51] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:55,069 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:55] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:18:55,076 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:55] "GET / HTTP/1.1" 200 -
+2024-04-24 18:18:55,317 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:18:55,395 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:55] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:18:55,710 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:18:55] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:11,906 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:19:11,906 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:19:13,644 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:13] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:19:13,897 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:13] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:19:14,566 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:19:14,574 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:14] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:19:14,579 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:14] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:17,279 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:17] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:19:17,292 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:17] "GET / HTTP/1.1" 200 -
+2024-04-24 18:19:17,619 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:17] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-04-24 18:19:17,620 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:17] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:17,885 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:17] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:45,627 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:45] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:19:46,008 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:46] "GET /orders/2 HTTP/1.1" 200 -
+2024-04-24 18:19:46,018 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:19:46,226 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:46] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:19:46,259 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:46] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:48,723 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:48] "[32mPOST /orders/2 HTTP/1.1[0m" 302 -
+2024-04-24 18:19:48,735 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:48] "GET / HTTP/1.1" 200 -
+2024-04-24 18:19:49,062 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-04-24 18:19:49,064 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:49] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:19:49,325 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:19:49] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:22:34,116 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:22:34,116 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:22:35,146 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:35] "GET / HTTP/1.1" 200 -
+2024-04-24 18:22:35,641 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:22:35,834 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:35] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:22:36,142 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:36] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:22:40,539 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:40] "[33mGET /job_delete/1 HTTP/1.1[0m" 404 -
+2024-04-24 18:22:41,824 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:22:41] "[33mGET /jobs/1 HTTP/1.1[0m" 404 -
+2024-04-24 18:23:22,707 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:23:22,707 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:23:22,807 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:22] "GET / HTTP/1.1" 200 -
+2024-04-24 18:23:23,264 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:23:23,470 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:23] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:23:23,786 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:23] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:23:25,154 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:25] "[33mGET /delete_order/1 HTTP/1.1[0m" 404 -
+2024-04-24 18:23:26,337 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:26] "GET /orders/1 HTTP/1.1" 200 -
+2024-04-24 18:23:26,349 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:23:26,659 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:26] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:23:26,967 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:26] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:23:30,618 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:30] "[32mPOST /orders/1 HTTP/1.1[0m" 302 -
+2024-04-24 18:23:30,925 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:30] "GET / HTTP/1.1" 200 -
+2024-04-24 18:23:31,286 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:23:31,287 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:31] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:23:31,531 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:23:31] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:35:59,502 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:35:59,502 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:36:03,088 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:03] "GET / HTTP/1.1" 200 -
+2024-04-24 18:36:03,590 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:36:03,776 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:03] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:36:04,083 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:04] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 18:36:08,530 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:08] "[33mGET /delete_order/3 HTTP/1.1[0m" 404 -
+2024-04-24 18:36:42,858 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:42] "[33mGET /delete_order/3 HTTP/1.1[0m" 404 -
+2024-04-24 18:36:46,904 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 18:36:46,904 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 18:36:47,406 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:47] "[32mGET /delete_order/3 HTTP/1.1[0m" 302 -
+2024-04-24 18:36:47,421 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:47] "GET / HTTP/1.1" 200 -
+2024-04-24 18:36:48,348 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 18:36:48,356 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:48] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 18:36:48,360 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 18:36:48] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -

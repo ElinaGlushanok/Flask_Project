@@ -52,7 +52,7 @@ def login():
             logging.info(f'user {current_user} logged in')
             print(1)
             return redirect("/")
-        return render_template('login.html', message="Неверный логин или пароль", form=form)
+        return render_template('login.html', message="Неверно введена информация пользователя", form=form)
     return render_template('login.html', title='Авторизация', form=form)
 
 
@@ -137,7 +137,8 @@ def new_order():
                 if i not in meals_available:
                     raise ValueError
             db_sess = db_session.create_session()
-            orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data, pause=add_form.pause.data)
+            orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data, pause=add_form.pause.data,
+                                   status=add_form.status.data)
             db_sess.add(orders)
             db_sess.commit()
             return redirect('/')
@@ -154,6 +155,43 @@ def new_order():
 @application.route("/show_menu")
 def show_menu():
     return render_template("menu.html", meals=menu, title='Меню')
+
+
+@application.route('/orders/<int:unic_num>', methods=['GET', 'POST'])
+@login_required
+def order_edit(unic_num):
+    form = NewOrderForm()
+    if request.method == "GET":
+        db_sess = db_session.create_session()
+        orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
+        if not orders or not current_user.admin:
+            abort(404)
+        form.meal.data = orders.meal
+        form.pause.data = orders.pause
+        form.status.data = orders.status
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
+        if orders and current_user.admin:
+            orders.meal = form.meal.data
+            orders.team_leader = form.pause.data
+            orders.status = form.status.data
+            db_sess.commit()
+            return redirect('/')
+        abort(404)
+    return render_template('new_order.html', title='Изменение заказа', form=form)
+
+
+@application.route('/delete_order/<int:unic_num>', methods=['GET', 'POST'])
+@login_required
+def delete_order(unic_num):
+    db_sess = db_session.create_session()
+    orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
+    if not orders or not current_user.admin:
+        abort(404)
+    db_sess.delete(orders)
+    db_sess.commit()
+    return redirect('/')
 
 
 def main():

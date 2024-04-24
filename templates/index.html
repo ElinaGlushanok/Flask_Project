@@ -13,6 +13,14 @@
 {% for order in orders %}
 <h3>Заказ #{{ order[0] }}</h3>
 
+<br>{% if current_user.admin %}
+<div>
+    <a href="/orders/{{ order[0] }}" class="btn btn-warning">Внести изменения</a>
+    <a href="/delete_order/{{ order[0] }}" class="btn btn-danger">Удалить заказ</a>
+</div>
+<br>
+{% endif %}
+
 <div class="table_container">
     <table class="table">
         <tr class="my_row">

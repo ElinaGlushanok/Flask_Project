@@ -1,5 +1,6 @@
 import requests
 import sqlite3
+import logging
 
 from data.users import User
 from data.orders import PersonalOrder
@@ -23,6 +24,7 @@ application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(application)
 keyword = 'qwerty'
+logging.basicConfig(filename='log_info.log', format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
 con = sqlite3.connect("db/canteen.db")
 cur = con.cursor()
@@ -47,6 +49,8 @@ def login():
                                           User.grade == form.grade.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember_me.data)
+            logging.info(f'user {current_user} logged in')
+            print(1)
             return redirect("/")
         return render_template('login.html', message="Неверный логин или пароль", form=form)
     return render_template('login.html', title='Авторизация', form=form)
@@ -67,7 +71,7 @@ def index():
         orders.append([elem.id, elem.person, ', \n'.join([f'{x} {y} (шт./порц.)' for x, y in meal_count.items()]),
                        summ, elem.pause, elem.status])
     return render_template("index.html", orders=orders, title='Заказы')
-# same
+# toDo: same
 
 
 @application.route('/logout')
@@ -153,14 +157,19 @@ def show_menu():
 
 
 def main():
-    api_url = 'https://random.imagecdn.app/v1/image?width=500&height=150&category=food&format=json'
-    photo = requests.get(api_url).json()
-    img_data = requests.get(photo['url']).content
-    with open('static/img/photo.jpg', 'wb') as handler:
-        handler.write(img_data)
-        handler.close()
-    db_session.global_init("db/canteen.db")
-    application.run()
+    try:
+        api_url = 'https://random.imagecdn.app/v1/image?width=1000&height=300&category=food&format=json'
+        photo = requests.get(api_url).json()
+        img_data = requests.get(photo['url']).content
+        with open('static/img/photo.jpg', 'wb') as handler:
+            handler.write(img_data)
+            handler.close()
+            logging.info('API picture was got')
+    except Exception as ex:
+        logging.error(ex)
+    finally:
+        db_session.global_init("db/canteen.db")
+        application.run()
 
 
 if __name__ == '__main__':

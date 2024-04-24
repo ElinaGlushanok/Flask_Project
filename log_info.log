@@ -491,3 +491,140 @@ jinja2.exceptions.UndefinedError: 'forms.delete_order.DeleteOrderForm object' ha
 2024-04-24 19:04:46,974 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:04:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2024-04-24 19:04:46,975 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:04:46] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
 2024-04-24 19:04:47,239 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:04:47] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:18:21,310 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:18:21,310 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:18:29,643 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:29] "GET / HTTP/1.1" 200 -
+2024-04-24 19:18:30,941 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:18:30,950 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:30] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 19:18:30,955 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:30] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:18:31,340 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-24 19:18:33,029 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:33] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 19:18:33,321 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:18:33,352 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:33] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:18:33,664 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:18:33] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:19:06,442 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:19:06,443 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:20:23,081 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:20:23,081 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:20:30,185 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\main.py", line 73, in index
+    summ += prices[name_count.split('-')[0]] * int(name_count.split('-')[1])
+KeyError: 'макароны'
+2024-04-24 19:20:30,190 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:20:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-04-24 19:20:30,992 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\main.py", line 73, in index
+    summ += prices[name_count.split('-')[0]] * int(name_count.split('-')[1])
+KeyError: 'макароны'
+2024-04-24 19:20:30,994 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:20:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-04-24 19:20:43,822 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\main.py", line 73, in index
+    summ += prices[name_count.split('-')[0]] * int(name_count.split('-')[1])
+KeyError: 'макароны'
+2024-04-24 19:20:43,825 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:20:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-04-24 19:20:49,674 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:20:49] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:21:04,079 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:21:04,079 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:21:19,512 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:21:19,512 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:21:19,584 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:21:19] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:22:00,657 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:22:00,657 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:22:00,751 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:22:00] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:22:49,874 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:22:49,874 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:22:50,010 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:22:50] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:24:45,628 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:24:45,628 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:24:45,868 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:24:45] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:26:01,386 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:26:01,386 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:26:01,601 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:01] "[33mGET /orders/2 HTTP/1.1[0m" 404 -
+2024-04-24 19:26:27,075 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:27] "GET / HTTP/1.1" 200 -
+2024-04-24 19:26:27,411 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:27] "GET / HTTP/1.1" 200 -
+2024-04-24 19:26:27,698 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:26:27,732 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:27] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 19:26:27,736 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:27] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:26:28,221 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:26:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-04-24 19:27:32,791 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:27:32,791 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:27:34,686 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\main.py", line 72, in index
+    summ += prices[name_count.split('-')[0]] * int(name_count.split('-')[1])
+KeyError: 'макароны'
+2024-04-24 19:27:34,689 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:27:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-04-24 19:29:02,967 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:29:02,967 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:29:03,048 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:03] "GET / HTTP/1.1" 200 -
+2024-04-24 19:29:03,893 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:29:04,054 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:04] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 19:29:04,369 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:04] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:29:06,639 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:06] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 19:29:06,723 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:29:06,881 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:06] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:29:06,958 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:06] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:29:30,973 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 19:29:30,973 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 19:29:31,065 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:31] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 19:29:31,995 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:29:32,137 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:32] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 19:29:32,450 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:29:32] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:01,934 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:01] "GET /show_menu HTTP/1.1" 200 -
+2024-04-24 19:30:01,961 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:30:02,268 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:02] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:02,585 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:02] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:05,759 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:05] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 19:30:05,786 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:30:06,095 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:06] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:06,410 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:06] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:23,891 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:23] "GET /orders/4 HTTP/1.1" 200 -
+2024-04-24 19:30:23,905 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 19:30:24,215 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:24] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 19:30:24,529 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 19:30:24] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -

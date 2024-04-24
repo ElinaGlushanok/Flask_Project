@@ -51,7 +51,6 @@ def login():
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember_me.data)
             logging.info(f'user {current_user} logged in')
-            print(1)
             return redirect("/")
         return render_template('login.html', message="Неверно введена информация пользователя", form=form)
     return render_template('login.html', title='Авторизация', form=form)
@@ -72,7 +71,6 @@ def index():
         orders.append([elem.id, elem.person, ', \n'.join([f'{x} {y} (шт./порц.)' for x, y in meal_count.items()]),
                        summ, elem.pause, elem.status])
     return render_template("index.html", orders=orders, title='Заказы')
-# toDo: same
 
 
 @application.route('/logout')
@@ -146,16 +144,16 @@ def new_order():
             db_sess.commit()
             return redirect('/')
         except ValueError:
-            return render_template('new_order.html', title='Создание заказа',
+            return render_template('new_order.html', title='Создание заказа', meals=menu,
                                    form=add_form, message="Пожалуйста, вводите блюда только из меню")
         except NameError:
-            return render_template('new_order.html', title='Создание заказа',
+            return render_template('new_order.html', title='Создание заказа', meals=menu,
                                    form=add_form, message="Пожалуйста, не вводите одинаковые блюда несколько раз")
         except Exception:
-            return render_template('new_order.html',
+            return render_template('new_order.html', meals=menu,
                                    title='Создание заказа', form=add_form, message="Неверный формат ввода блюд")
 
-    return render_template('new_order.html', title='Создание заказа', form=add_form)
+    return render_template('new_order.html', title='Создание заказа', form=add_form, meals=menu,)
 
 
 @application.route("/show_menu")
@@ -185,7 +183,7 @@ def order_edit(unic_num):
             db_sess.commit()
             return redirect('/')
         abort(404)
-    return render_template('new_order.html', title='Изменение заказа', form=form)
+    return render_template('new_order.html', title='Изменение заказа', form=form, meals=menu,)
 
 
 @application.route('/delete_order/<int:unic_num>', methods=['GET', 'POST'])
@@ -208,7 +206,9 @@ def delete_order(unic_num):
 
 def main():
     try:
-        api_url = 'https://random.imagecdn.app/v1/image?width=1000&height=300&category=food&format=json'
+        width = 1000
+        height = 300
+        api_url = f'https://random.imagecdn.app/v1/image?width={width}&height={height}&category=food&format=json'
         photo = requests.get(api_url).json()
         img_data = requests.get(photo['url']).content
         with open('static/img/photo.jpg', 'wb') as handler:

@@ -2,6 +2,7 @@
 
 {%block content %}
 <h1>{{ title }}</h1>
+
 <form action="" method="post">
     {{ form.hidden_tag() }}
         {{ form.pause.label }} <br>
@@ -23,8 +24,27 @@
 
     <br>
     {{ form.status() }} {{ form.status.label }}
+    <br>
     {{ form.submit(type="submit", class="btn btn-primary") }}
     {{message}}
-
 </form>
+<br><br>
+<h2>Меню</h2>
+<br>
+<div class="table_container">
+    <table class="table">
+        <tr class="my_row">
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">id блюда</td>
+            <td class="title" width="200px" bgcolor="#dddddd" align="center">Название блюда</td>
+            <td class="title" width="150px" bgcolor="#dddddd" align="center">Стоимость блюда</td>
+        </tr>
+        {% for meal in meals %}
+        <tr class="my_row">
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[0] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[1] }}</td>
+            <td class="ordinary" bgcolor="#eeeeff" align="center">{{ meal[2] }} руб.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 {% endblock %}

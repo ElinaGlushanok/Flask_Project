@@ -836,3 +836,23 @@ KeyError: 'макароны'
 2024-04-24 20:43:56,035 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 20:43:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2024-04-24 20:43:56,040 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 20:43:56] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
 2024-04-24 20:43:56,347 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 20:43:56] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:13:52,313 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-24 21:13:52,313 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-24 21:13:55,264 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:55] "GET / HTTP/1.1" 200 -
+2024-04-24 21:13:56,237 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 21:13:56,318 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:56] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-24 21:13:56,323 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:56] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:13:58,623 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:58] "GET /login HTTP/1.1" 200 -
+2024-04-24 21:13:58,675 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 21:13:58,867 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:58] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:13:58,946 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:13:58] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:14:11,345 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-24 21:14:11,509 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:11] "GET / HTTP/1.1" 200 -
+2024-04-24 21:14:11,851 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 21:14:11,852 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:11] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:14:12,100 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:12] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:14:14,418 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:14] "GET /add_order HTTP/1.1" 200 -
+2024-04-24 21:14:14,718 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-24 21:14:14,748 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:14] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-24 21:14:15,059 INFO werkzeug 127.0.0.1 - - [24/Apr/2024 21:14:15] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -

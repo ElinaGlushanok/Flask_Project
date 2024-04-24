@@ -5,7 +5,7 @@ from wtforms import StringField, IntegerField, SubmitField, BooleanField
 
 class NewOrderForm(FlaskForm):
     person = IntegerField('id')
-    meal = StringField('Блюда (указывайте в формате "{блюдо}-{колличество}, {блюдо}-{колличество}... ")',
+    meal = StringField('Блюда (указывайте в формате "{блюдо}-{количество}, {блюдо}-{количество}... ")',
                        validators=[DataRequired()])
     pause = IntegerField('Номер перемены', validators=[DataRequired()])
     status = BooleanField('Отдан')

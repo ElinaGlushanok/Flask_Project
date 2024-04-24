@@ -16,6 +16,7 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 
 from forms.user import RegisterForm
 from forms.admin import RegisterAdminForm
+from forms.delete_order import DeleteOrderForm
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -134,8 +135,10 @@ def new_order():
             meals_ordered = add_form.meal.data.split(', ')
             meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
             for i in meals.keys():
-                if i not in meals_available:
+                if i.lower() not in meals_available:
                     raise ValueError
+            if len(set(meals.keys())) != len(meals.keys()):
+                raise NameError
             db_sess = db_session.create_session()
             orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data, pause=add_form.pause.data,
                                    status=add_form.status.data)
@@ -144,12 +147,15 @@ def new_order():
             return redirect('/')
         except ValueError:
             return render_template('new_order.html', title='Создание заказа',
-                                   form=add_form, message="Пожалуйста, вводите влюда только из меню")
+                                   form=add_form, message="Пожалуйста, вводите блюда только из меню")
+        except NameError:
+            return render_template('new_order.html', title='Создание заказа',
+                                   form=add_form, message="Пожалуйста, не вводите одинаковые блюда несколько раз")
         except Exception:
             return render_template('new_order.html',
                                    title='Создание заказа', form=add_form, message="Неверный формат ввода блюд")
 
-    return render_template('new_order.html', title='Создание заказа', form=add_form, status=False)
+    return render_template('new_order.html', title='Создание заказа', form=add_form)
 
 
 @application.route("/show_menu")
@@ -185,13 +191,19 @@ def order_edit(unic_num):
 @application.route('/delete_order/<int:unic_num>', methods=['GET', 'POST'])
 @login_required
 def delete_order(unic_num):
-    db_sess = db_session.create_session()
-    orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
-    if not orders or not current_user.admin:
-        abort(404)
-    db_sess.delete(orders)
-    db_sess.commit()
-    return redirect('/')
+    form = DeleteOrderForm()
+    if form.validate_on_submit():
+        if form.key_word.data != keyword:
+            return render_template('delete_order.html',
+                                   title='Удаление заказа', form=form, message="Неверно введено кодовое слово")
+        db_sess = db_session.create_session()
+        orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
+        if not orders or not current_user.admin:
+            abort(404)
+        db_sess.delete(orders)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('delete_order.html', title='Удаление заказа', form=form)
 
 
 def main():

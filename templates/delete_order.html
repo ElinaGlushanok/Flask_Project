@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block content %}
+<h1>{{ title }}</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+        {{ form.key_word.label }} <br>
+            {{ form.key_word(class="form-control", type="key_word") }}
+            {% for error in form.key_word.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+            {% endfor %}
+         <br>
+
+        {{ form.status() }} {{ form.status.label }}
+        <br>
+        {{ form.submit(type="submit", class="btn btn-primary") }}
+        {{message}}
+
+
+</form>
+{% endblock %}

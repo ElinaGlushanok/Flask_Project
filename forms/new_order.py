@@ -9,4 +9,4 @@ class NewOrderForm(FlaskForm):
                        validators=[DataRequired()])
     pause = IntegerField('Номер перемены', validators=[DataRequired()])
     status = BooleanField('Отдан')
-    submit = SubmitField('Submit')
+    submit = SubmitField('Подтвердить')

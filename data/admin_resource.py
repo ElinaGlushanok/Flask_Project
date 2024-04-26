@@ -1,7 +1,7 @@
 from flask import jsonify
 from data import db_session
 from data.users import User
-from data.key_word import keyword
+from data.static_data import keyword
 from flask_restful import reqparse, abort, Resource
 
 

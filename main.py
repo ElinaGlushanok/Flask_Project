@@ -1,5 +1,4 @@
 import requests
-import sqlite3
 import logging
 
 from data.users import User
@@ -9,7 +8,7 @@ from forms.login_form import LoginForm
 from forms.new_order import NewOrderForm
 
 from data import db_session
-from data.key_word import keyword
+from data.static_data import *
 
 from flask_restful import Api
 from flask import request, Flask, render_template, redirect, abort, make_response, jsonify
@@ -31,11 +30,6 @@ login_manager = LoginManager()
 login_manager.init_app(application)
 logging.basicConfig(filename='log_info.log', format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
-con = sqlite3.connect("db/canteen.db")
-cur = con.cursor()
-menu = list(cur.execute(f'''select * from menu''').fetchall())
-meals_available = [x[1] for x in menu]
-prices = {x[1]: x[2] for x in menu}
 db_session.global_init("db/canteen.db")
 
 api.add_resource(UsersListResource, '/api/v2/users')

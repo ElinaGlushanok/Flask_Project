@@ -20,6 +20,7 @@ from forms.delete_order import DeleteOrderForm
 
 from data.user_resource import UsersResource, UsersListResource
 from data.admin_resource import AdminsResource, AdminsListResource
+from data.orders_resource import OrdersResource, OrdersListResource
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -36,6 +37,8 @@ api.add_resource(UsersListResource, '/api/v2/users')
 api.add_resource(UsersResource, '/api/v2/users/<int:users_id>')
 api.add_resource(AdminsListResource, '/api/v2/admins')
 api.add_resource(AdminsResource, '/api/v2/admins/<int:admins_id>')
+api.add_resource(OrdersListResource, '/api/v2/orders')
+api.add_resource(OrdersResource, '/api/v2/orders/<int:orders_id>')
 
 
 @login_manager.user_loader

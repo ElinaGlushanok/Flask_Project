@@ -93,6 +93,8 @@ def register_user():
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
             return render_template('register_user.html', title='Регистрация', form=form, message="Пароли не совпадают")
+        if form.grade.data == '-':
+            return render_template('register_user.html', title='Регистрация', form=form, message="Некорректный класс")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.surname == form.surname.data,
                                       User.name == form.name.data,

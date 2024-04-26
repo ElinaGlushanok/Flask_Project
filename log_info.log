@@ -877,3 +877,121 @@ KeyError: 'макароны'
 2024-04-26 17:10:15,134 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 17:10:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2024-04-26 17:10:15,237 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 17:10:15] "GET /static/img/photo.jpg HTTP/1.1" 200 -
 2024-04-26 17:10:15,242 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 17:10:15] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:33:52,718 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:33:52,718 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:33:53,310 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:33:53] "GET / HTTP/1.1" 200 -
+2024-04-26 19:33:54,210 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:33:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-26 19:33:54,295 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:33:54] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-26 19:33:54,602 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:33:54] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:33:54,940 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:33:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-26 19:34:03,541 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:34:03] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:36:33,411 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:36:33,412 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:36:33,512 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:36:33] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:36:36,198 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:36:36] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:36:37,519 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:36:37] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:36:44,806 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:36:44,806 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:36:46,452 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:36:46] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:37:17,668 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:37:17,668 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:37:19,187 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:19] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:37:32,123 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:32] "GET /add_order HTTP/1.1" 200 -
+2024-04-26 19:37:33,029 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-26 19:37:33,246 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:33] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-26 19:37:33,559 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:33] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:37:37,824 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:37:37] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:37:50,585 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:37:50,586 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:38:46,679 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:38:46] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:39:01,033 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:39:01,033 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:39:02,730 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:39:02] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:39:25,537 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:39:25] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:40:11,373 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:11] "GET / HTTP/1.1" 200 -
+2024-04-26 19:40:12,307 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "GET / HTTP/1.1" 200 -
+2024-04-26 19:40:12,322 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "GET /static/css/style.css HTTP/1.1" 200 -
+2024-04-26 19:40:12,336 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-26 19:40:12,342 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:40:12,472 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-26 19:40:12,473 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:40:12,481 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 19:40:12,540 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-26 19:40:23,661 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:23] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:40:57,547 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:40:57,548 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:40:59,534 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:40:59] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:41:20,831 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:41:20,832 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:41:20,841 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:41:20] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:42:20,076 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:42:20,076 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:42:20,509 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:42:20] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:42:22,834 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:42:22] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:42:41,652 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:42:41] "[33mGET /api/v3/users HTTP/1.1[0m" 404 -
+2024-04-26 19:42:44,620 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:42:44] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:45:21,073 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:45:21,073 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:45:21,714 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:45:21] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:45:45,824 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:45:45,824 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:45:45,860 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:45:45] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:45:57,329 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:45:57,329 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:45:58,731 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:45:58] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:46:07,682 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:46:07,682 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:46:09,347 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:46:09] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:47:12,943 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:47:12,943 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:47:13,054 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:47:13] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:48:02,331 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:48:02] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-26 19:48:05,070 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:48:05] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-26 19:48:38,956 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 19:48:38,957 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 19:48:39,138 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:48:39] "GET /api/v2/users/1 HTTP/1.1" 200 -

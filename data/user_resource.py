@@ -16,11 +16,13 @@ class UsersResource(Resource):
         abort_if_user_not_found(users_id)
         session = db_session.create_session()
         users = session.get(User, users_id)
-        return jsonify(
-            {
-                'users': users.to_dict(only=('id', 'surname', 'name', 'grade'))
-            }
-        )
+        if users.grade != '-':
+            return jsonify(
+                {
+                    'users': users.to_dict(only=('id', 'surname', 'name', 'grade'))
+                }
+            )
+        abort(404, message=f"User {users_id} not found")
 
     def delete(self, users_id):
         abort_if_user_not_found(users_id)
@@ -43,8 +45,7 @@ class UsersListResource(Resource):
         users = session.query(User).all()
         return jsonify(
             {
-                'users': [item.to_dict(
-                    only=('id', 'surname', 'name', 'grade')) for item in users]
+                'users': [user.to_dict(only=('id', 'surname', 'name', 'grade')) for user in users if user.grade != '-']
             })
 
     def post(self):

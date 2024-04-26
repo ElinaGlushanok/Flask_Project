@@ -18,8 +18,11 @@ from forms.user import RegisterForm
 from forms.admin import RegisterAdminForm
 from forms.delete_order import DeleteOrderForm
 
+from data.user_resource import UsersResource, UsersListResource
+
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+api = Api(application)
 
 
 login_manager = LoginManager()
@@ -32,6 +35,10 @@ cur = con.cursor()
 menu = list(cur.execute(f'''select * from menu''').fetchall())
 meals_available = [x[1] for x in menu]
 prices = {x[1]: x[2] for x in menu}
+db_session.global_init("db/canteen.db")
+
+api.add_resource(UsersListResource, '/api/v2/users')
+api.add_resource(UsersResource, '/api/v2/users/<int:users_id>')
 
 
 @login_manager.user_loader
@@ -204,7 +211,7 @@ def delete_order(unic_num):
     return render_template('delete_order.html', title='Удаление заказа', form=form)
 
 
-def main():
+if __name__ == '__main__':
     try:
         width = 1000
         height = 300
@@ -218,9 +225,4 @@ def main():
     except Exception as ex:
         logging.error(ex)
     finally:
-        db_session.global_init("db/canteen.db")
-        application.run()
-
-
-if __name__ == '__main__':
-    main()
+        application.run(host='0.0.0.0')

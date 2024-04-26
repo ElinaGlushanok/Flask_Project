@@ -9,6 +9,7 @@ from forms.login_form import LoginForm
 from forms.new_order import NewOrderForm
 
 from data import db_session
+from data.key_word import keyword
 
 from flask_restful import Api
 from flask import request, Flask, render_template, redirect, abort, make_response, jsonify
@@ -19,6 +20,7 @@ from forms.admin import RegisterAdminForm
 from forms.delete_order import DeleteOrderForm
 
 from data.user_resource import UsersResource, UsersListResource
+from data.admin_resource import AdminsResource, AdminsListResource
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -27,7 +29,6 @@ api = Api(application)
 
 login_manager = LoginManager()
 login_manager.init_app(application)
-keyword = 'qwerty'
 logging.basicConfig(filename='log_info.log', format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
 con = sqlite3.connect("db/canteen.db")
@@ -39,6 +40,8 @@ db_session.global_init("db/canteen.db")
 
 api.add_resource(UsersListResource, '/api/v2/users')
 api.add_resource(UsersResource, '/api/v2/users/<int:users_id>')
+api.add_resource(AdminsListResource, '/api/v2/admins')
+api.add_resource(AdminsResource, '/api/v2/admins/<int:admins_id>')
 
 
 @login_manager.user_loader
@@ -113,7 +116,6 @@ def register_user():
 def register_admin():
     form = RegisterAdminForm()
     if form.validate_on_submit():
-        global keyword
         if form.password.data != form.password_again.data:
             return render_template('register_admin.html',
                                    title='Регистрация', form=form, message="Пароли не совпадают")
@@ -211,6 +213,16 @@ def delete_order(unic_num):
         db_sess.commit()
         return redirect('/')
     return render_template('delete_order.html', title='Удаление заказа', form=form)
+
+
+@application.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify({'error': 'Not found'}), 404)
+
+
+@application.errorhandler(400)
+def bad_request(_):
+    return make_response(jsonify({'error': 'Bad Request'}), 400)
 
 
 if __name__ == '__main__':

@@ -995,3 +995,110 @@ KeyError: 'макароны'
  * Running on http://192.168.103.170:5000
 2024-04-26 19:48:38,957 INFO werkzeug [33mPress CTRL+C to quit[0m
 2024-04-26 19:48:39,138 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 19:48:39] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-26 20:06:37,476 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 20:06:37,477 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 20:06:40,343 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:40] "GET / HTTP/1.1" 200 -
+2024-04-26 20:06:41,943 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-26 20:06:41,954 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:41] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-26 20:06:41,963 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:41] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-26 20:06:43,327 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:43] "GET //api/v2/admins HTTP/1.1" 200 -
+2024-04-26 20:06:51,309 ERROR main Exception on /api/v2/admins/2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'admins_id'
+2024-04-26 20:06:51,411 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:06:51] "[35m[1mGET /api/v2/admins/2 HTTP/1.1[0m" 500 -
+2024-04-26 20:07:01,792 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:07:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-26 20:07:08,524 ERROR main Exception on /api/v2/admins/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'admins_id'
+2024-04-26 20:07:08,526 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:07:08] "[35m[1mGET /api/v2/admins/1 HTTP/1.1[0m" 500 -
+2024-04-26 20:07:41,273 ERROR main Exception on /api/v2/admins/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'admins_id'
+2024-04-26 20:07:41,275 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:07:41] "[35m[1mGET /api/v2/admins/1 HTTP/1.1[0m" 500 -
+2024-04-26 20:07:43,758 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 20:07:43,759 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 20:07:45,946 ERROR main Exception on /api/v2/admins/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'admins_id'
+2024-04-26 20:07:45,949 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:07:45] "[35m[1mGET /api/v2/admins/1 HTTP/1.1[0m" 500 -
+2024-04-26 20:08:04,033 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 20:08:04,033 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 20:08:05,046 ERROR main Exception on /api/v2/admins/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'admins_id'
+2024-04-26 20:08:05,050 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:08:05] "[35m[1mGET /api/v2/admins/1 HTTP/1.1[0m" 500 -
+2024-04-26 20:09:01,144 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 20:09:01,144 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 20:09:01,975 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:09:01] "GET /api/v2/admins/1 HTTP/1.1" 200 -
+2024-04-26 20:09:15,704 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:09:15] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-26 20:09:18,646 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:09:18] "[33mGET /api/v2/admins/2 HTTP/1.1[0m" 404 -
+2024-04-26 20:09:23,662 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:09:23] "[33mGET /api/v2/admins/d HTTP/1.1[0m" 404 -
+2024-04-26 20:10:44,028 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-26 20:10:44,028 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-26 20:10:45,328 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:10:45] "[33mGET /api/v2/admins/2 HTTP/1.1[0m" 404 -
+2024-04-26 20:10:53,418 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:10:53] "[33mGET /api/v2/admins/y HTTP/1.1[0m" 404 -

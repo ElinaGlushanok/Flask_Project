@@ -214,12 +214,12 @@ def delete_order(unic_num):
 
 @application.errorhandler(404)
 def not_found(error):
-    return make_response(jsonify({'error': 'Not found'}), 404)
+    return make_response(jsonify({'error': error if error else 'Not found'}), 404)
 
 
 @application.errorhandler(400)
-def bad_request(_):
-    return make_response(jsonify({'error': 'Bad Request'}), 400)
+def bad_request(error):
+    return make_response(jsonify({'error': error if error else 'Bad request'}), 400)
 
 
 if __name__ == '__main__':

@@ -55,7 +55,7 @@ class UsersListResource(Resource):
         users = User(
             surname=args['surname'],
             name=args['name'],
-            age=args['grade']
+            grade=args['grade']
         )
         session.add(users)
         session.commit()

@@ -1102,3 +1102,91 @@ TypeError: get() got an unexpected keyword argument 'admins_id'
 2024-04-26 20:10:44,028 INFO werkzeug [33mPress CTRL+C to quit[0m
 2024-04-26 20:10:45,328 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:10:45] "[33mGET /api/v2/admins/2 HTTP/1.1[0m" 404 -
 2024-04-26 20:10:53,418 INFO werkzeug 127.0.0.1 - - [26/Apr/2024 20:10:53] "[33mGET /api/v2/admins/y HTTP/1.1[0m" 404 -
+2024-04-27 19:54:08,809 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 19:54:08,811 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 19:54:10,741 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:10] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 19:54:12,784 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:12] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 19:54:14,813 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:14] "[33mGET /api/v2/10 HTTP/1.1[0m" 404 -
+2024-04-27 19:54:16,859 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:16] "[33mGET /api/v2/q HTTP/1.1[0m" 404 -
+2024-04-27 19:54:18,890 ERROR main Exception on /api/v2/users [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\user_resource.py", line 65, in post
+    users = User(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state.py", line 565, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state.py", line 562, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\decl_base.py", line 2139, in _declarative_constructor
+    raise TypeError(
+TypeError: 'age' is an invalid keyword argument for User
+2024-04-27 19:54:18,952 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:18] "[35m[1mPOST /api/v2/users HTTP/1.1[0m" 500 -
+2024-04-27 19:54:20,998 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 19:54:20] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:05:16,539 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 20:05:16,539 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 20:05:21,678 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:05:21] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:05:23,725 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:05:23] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 20:05:25,752 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:05:25] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 20:05:27,788 ERROR main Exception on /api/v2/users/q [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 844, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 453, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\werkzeug\routing\map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 755, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 730, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\main.py", line 217, in not_found
+    return make_response(jsonify({'error': error if error else 'Not found'}), 404)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\Users\Serg\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Serg\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Serg\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NotFound is not JSON serializable
+2024-04-27 20:05:27,854 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:05:27] "[35m[1mGET /api/v2/users/q HTTP/1.1[0m" 500 -

@@ -8,6 +8,6 @@ from .db_session import SqlAlchemyBase
 class Admin(SqlAlchemyBase, UserMixin, SerializerMixin):
     __tablename__ = 'admin'
 
-    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    surname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    name = sqlalchemy.Column(sqlalchemy.String)
+    surname = sqlalchemy.Column(sqlalchemy.String)
+    password = sqlalchemy.Column(sqlalchemy.String)

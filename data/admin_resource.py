@@ -26,18 +26,11 @@ class AdminsResource(Resource):
             )
         abort(404, message=f"Admin {admins_id} not found")
 
-    def delete(self, admins_id):
-        abort_if_user_not_found(admins_id)
-        session = db_session.create_session()
-        users = session.get(User, admins_id)
-        session.delete(users)
-        session.commit()
-        return jsonify({'success': 'OK'})
-
 
 parser = reqparse.RequestParser()
 parser.add_argument('surname', required=True)
 parser.add_argument('name', required=True)
+parser.add_argument('password', required=True)
 parser.add_argument('keyword', required=True)
 
 
@@ -56,11 +49,16 @@ class AdminsListResource(Resource):
         session = db_session.create_session()
         if args['keyword'] != keyword:
             abort(400, message='Неверное кодовое слово')
-        users = User(
-            surname=args['surname'],
-            name=args['name'],
-            grade='-'
-        )
-        session.add(users)
-        session.commit()
-        return jsonify({'id': users.id})
+        if not session.query(User).filter(User.surname == args['surname'],
+                                          User.name == args['name'],
+                                          User.grade == '-').first():
+            users = User(
+                surname=args['surname'],
+                name=args['name'],
+                grade='-',
+                password=args['password']
+            )
+            session.add(users)
+            session.commit()
+            return jsonify({'id': users.id})
+        abort(400, message='Такой админ уже есть')

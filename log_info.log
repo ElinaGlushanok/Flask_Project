@@ -1190,3 +1190,256 @@ Traceback (most recent call last):
     raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
 TypeError: Object of type NotFound is not JSON serializable
 2024-04-27 20:05:27,854 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:05:27] "[35m[1mGET /api/v2/users/q HTTP/1.1[0m" 500 -
+2024-04-27 20:28:02,472 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 20:28:02,473 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 20:33:06,999 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 20:33:06,999 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 20:44:26,874 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 20:44:26,875 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 20:44:28,765 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:28] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:44:30,796 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:30] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 20:44:32,831 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:32] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 20:44:34,860 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:34] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 20:44:36,904 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:36] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:44:38,959 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:38] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:44:41,021 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:41] "DELETE /api/v2/users/9 HTTP/1.1" 200 -
+2024-04-27 20:44:43,073 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:43] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:44:54,865 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:54] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:44:56,907 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:56] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 20:44:58,938 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:44:58] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 20:45:00,969 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:00] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 20:45:03,007 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:03] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:45:05,049 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:05] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 20:45:07,077 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:07] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:45:09,106 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:09] "DELETE /api/v2/users/9 HTTP/1.1" 200 -
+2024-04-27 20:45:11,144 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 20:45:11] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 20:59:56,169 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 20:59:56,169 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 21:00:14,114 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:14] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:00:16,162 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:16] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 21:00:18,192 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:18] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:00:20,235 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:20] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:00:22,278 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:22] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:00:24,308 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:24] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:00:26,332 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:26] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:00:28,359 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:28] "[33mDELETE /api/v2/users/9 HTTP/1.1[0m" 404 -
+2024-04-27 21:00:30,379 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:00:30] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:01:45,131 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:45] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:01:47,184 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:47] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:01:49,245 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:49] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:01:51,262 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:51] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:01:53,295 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:53] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:01:55,330 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:55] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:01:57,364 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:57] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:01:59,391 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:01:59] "[33mDELETE /api/v2/users/9 HTTP/1.1[0m" 404 -
+2024-04-27 21:02:01,438 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:02:01] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:03:16,900 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:16] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:03:18,943 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:18] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:03:20,990 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:20] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:03:23,016 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:23] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:03:25,087 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:25] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:03:27,129 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:27] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:03:29,193 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:29] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:03:31,236 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:31] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:03:33,360 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:33] "[33mDELETE /api/v2/users/9 HTTP/1.1[0m" 404 -
+2024-04-27 21:03:35,401 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:03:35] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:04:20,198 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:20] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:04:22,259 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:22] "[33mGET /api/v2/users/1 HTTP/1.1[0m" 404 -
+2024-04-27 21:04:24,306 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:24] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:04:26,334 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:26] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:04:28,377 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:28] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:04:30,455 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:30] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:04:32,491 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:32] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:04:34,522 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:34] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:04:36,545 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:36] "[33mDELETE /api/v2/users/9 HTTP/1.1[0m" 404 -
+2024-04-27 21:04:38,585 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:04:38] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:06:02,367 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:02] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:06:04,418 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:04] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:06:06,464 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:06] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:06:08,496 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:08] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:06:10,541 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:10] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:06:12,605 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:12] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:06:14,657 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:14] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:06:16,698 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:16] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:06:18,732 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:18] "[33mDELETE /api/v2/users/9 HTTP/1.1[0m" 404 -
+2024-04-27 21:06:20,767 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:20] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:06:31,599 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:06:31] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:07:03,652 ERROR main Exception on /api/v2/users/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\user_resource.py", line 18, in get
+    users = session.get(User, users_id)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 3637, in get
+    return self._get_impl(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 3817, in _get_impl
+    return db_load_fn(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 2181, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 2050, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1144, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 3279, in connect
+    return self._connection_cls(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 3303, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\pool\impl.py", line 168, in _do_get
+    raise exc.TimeoutError(
+sqlalchemy.exc.TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)
+2024-04-27 21:07:03,726 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:03] "[35m[1mGET /api/v2/users/1 HTTP/1.1[0m" 500 -
+2024-04-27 21:07:10,983 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:10] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:07:10,984 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:10] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:07:13,002 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:13] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:07:15,034 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:15] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:07:17,059 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:17] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:07:19,090 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:19] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:07:21,118 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:21] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:07:23,145 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:07:23] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:08:19,363 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 21:08:19,363 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 21:08:23,361 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:23] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:08:25,388 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:25] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:08:27,424 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:27] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:08:29,457 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:29] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:08:31,482 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:31] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:08:33,517 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:33] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:08:35,560 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:35] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:08:37,595 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:37] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:08:39,632 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:39] "[33mDELETE /api/v2/users/2 HTTP/1.1[0m" 404 -
+2024-04-27 21:08:41,661 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:41] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:08:56,528 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 21:08:56,528 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 21:08:58,758 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:08:58] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:09:00,805 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:00] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:09:02,827 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:02] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:09:04,855 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:04] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:09:06,885 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:06] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:09:08,921 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:08] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:09:10,955 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:10] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:09:12,986 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:12] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:09:15,024 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:15] "[33mDELETE /api/v2/users/2 HTTP/1.1[0m" 404 -
+2024-04-27 21:09:17,053 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:17] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:09:56,589 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:56] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:09:58,647 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:09:58] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:10:00,676 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:00] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:10:02,698 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:02] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:10:04,718 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:04] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:10:06,768 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:06] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:10:08,803 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:08] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:10:10,841 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:10] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:10:12,892 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:12] "DELETE /api/v2/users/2 HTTP/1.1" 200 -
+2024-04-27 21:10:14,918 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:10:14] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:15:06,419 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:06] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:15:08,455 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:08] "[33mGET /api/v2/admins/1 HTTP/1.1[0m" 404 -
+2024-04-27 21:15:10,491 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:10] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:15:12,511 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:12] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:15:14,533 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:14] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:15:16,558 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:16] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:15:52,200 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:52] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:15:54,232 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:54] "[33mGET /api/v2/admins/1 HTTP/1.1[0m" 404 -
+2024-04-27 21:15:56,271 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:56] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:15:58,304 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:15:58] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:16:00,333 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:00] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:02,364 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:02] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:30,197 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:30] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:32,236 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:32] "[33mGET /api/v2/admins/1 HTTP/1.1[0m" 404 -
+2024-04-27 21:16:34,270 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:34] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:16:36,327 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:36] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:16:38,360 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:38] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:40,382 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:40] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:16:42,414 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:42] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:51,337 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:51] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:16:53,383 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:53] "GET /api/v2/admins/2 HTTP/1.1" 200 -
+2024-04-27 21:16:55,424 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:55] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:16:57,464 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:57] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:16:59,513 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:16:59] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:17:01,553 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:17:01] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:17:03,592 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:17:03] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:18:44,750 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:44] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:18:46,768 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:46] "GET /api/v2/admins/2 HTTP/1.1" 200 -
+2024-04-27 21:18:48,802 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:48] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:18:50,845 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:50] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:18:52,887 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:52] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:18:54,915 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:54] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:18:56,964 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:56] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:18:59,007 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:18:59] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:19:23,730 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 21:19:23,730 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 21:19:52,212 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 21:19:52,212 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 21:19:52,622 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:19:52] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:19:54,657 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:19:54] "GET /api/v2/admins/2 HTTP/1.1" 200 -
+2024-04-27 21:19:56,677 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:19:56] "[33mGET /api/v2/admins/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:19:58,701 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:19:58] "[33mGET /api/v2/admins/q HTTP/1.1[0m" 404 -
+2024-04-27 21:20:00,728 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:20:00] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:20:02,746 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:20:02] "[31m[1mPOST /api/v2/admins HTTP/1.1[0m" 400 -
+2024-04-27 21:20:04,796 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:20:04] "POST /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:20:06,837 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:20:06] "GET /api/v2/admins HTTP/1.1" 200 -
+2024-04-27 21:23:09,501 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:09] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:23:11,548 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:11] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:23:13,580 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:13] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:23:15,602 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:15] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:23:17,636 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:17] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:23:19,684 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:19] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:23:21,729 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:21] "POST /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:23:23,760 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:23] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:23:25,792 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:25] "DELETE /api/v2/users/2 HTTP/1.1" 200 -
+2024-04-27 21:23:27,829 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:27] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:23:45,495 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:45] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:23:47,532 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:47] "GET /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 21:23:49,576 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:49] "[33mGET /api/v2/users/10 HTTP/1.1[0m" 404 -
+2024-04-27 21:23:51,613 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:51] "[33mGET /api/v2/users/q HTTP/1.1[0m" 404 -
+2024-04-27 21:23:53,652 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:53] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:23:55,705 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:55] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:23:57,726 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:57] "[31m[1mPOST /api/v2/users HTTP/1.1[0m" 400 -
+2024-04-27 21:23:59,756 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:59] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 21:24:01,796 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:24:01] "[33mDELETE /api/v2/users/2 HTTP/1.1[0m" 404 -
+2024-04-27 21:24:03,819 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:24:03] "GET /api/v2/users HTTP/1.1" 200 -

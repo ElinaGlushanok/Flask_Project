@@ -37,6 +37,7 @@ parser = reqparse.RequestParser()
 parser.add_argument('surname', required=True)
 parser.add_argument('name', required=True)
 parser.add_argument('grade', required=True)
+parser.add_argument('password', required=True)
 
 
 class UsersListResource(Resource):
@@ -52,11 +53,16 @@ class UsersListResource(Resource):
     def post(self):
         args = parser.parse_args()
         session = db_session.create_session()
-        users = User(
-            surname=args['surname'],
-            name=args['name'],
-            grade=args['grade']
-        )
-        session.add(users)
-        session.commit()
-        return jsonify({'id': users.id})
+        if not session.query(User).filter(User.surname == args['surname'],
+                                          User.name == args['name'],
+                                          User.grade == args['grade']).first():
+            users = User(
+                surname=args['surname'],
+                name=args['name'],
+                grade=args['grade'],
+                password=args['password']
+            )
+            session.add(users)
+            session.commit()
+            return jsonify({'id': users.id})
+        abort(400, message='Такой пользователь уже есть')

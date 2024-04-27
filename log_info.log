@@ -1443,3 +1443,631 @@ sqlalchemy.exc.TimeoutError: QueuePool limit of size 5 overflow 10 reached, conn
 2024-04-27 21:23:59,756 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:23:59] "GET /api/v2/users HTTP/1.1" 200 -
 2024-04-27 21:24:01,796 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:24:01] "[33mDELETE /api/v2/users/2 HTTP/1.1[0m" 404 -
 2024-04-27 21:24:03,819 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 21:24:03] "GET /api/v2/users HTTP/1.1" 200 -
+2024-04-27 22:38:04,543 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:38:04,546 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:39:40,928 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:39:40,928 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:39:44,998 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:44] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:39:47,044 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:47] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:39:49,077 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:49] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:39:51,111 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:51] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:39:53,134 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:53] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:39:55,175 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:55] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:39:57,213 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:57] "DELETE /api/v2/users/1 HTTP/1.1" 200 -
+2024-04-27 22:39:59,262 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:39:59] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 415 -
+2024-04-27 22:40:36,366 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:36] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:40:38,390 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:38] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:40:40,437 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:40] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:40:42,468 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:42] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:40:44,535 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:44] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:40:46,593 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:46] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:40:48,628 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:48] "DELETE /api/v2/orders/1 HTTP/1.1" 200 -
+2024-04-27 22:40:50,676 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:40:50] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 415 -
+2024-04-27 22:41:44,840 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:44] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:41:46,877 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:46] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:41:48,909 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:48] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:41:50,932 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:50] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:41:52,995 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:52] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:41:55,034 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 69, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'pause': 3, 'person': 1, 'meal': 'макароны-3, котлета-3', 'status': 'True'}]]
+2024-04-27 22:41:55,304 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:55] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:41:57,325 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:57] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:41:59,386 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:41:59] "DELETE /api/v2/orders/1 HTTP/1.1" 200 -
+2024-04-27 22:42:01,425 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:01] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:42:42,940 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:42] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:42:47,814 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:42:47,815 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:42:50,128 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:50] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:42:52,178 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:52] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:42:54,220 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:54] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:42:56,243 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:56] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:42:58,303 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:42:58] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:43:00,349 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 69, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'person': 1, 'status': 'True', 'meal': 'макароны-3, котлета-3', 'pause': 3}]]
+2024-04-27 22:43:00,360 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:43:00] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:43:02,404 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:43:02] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:43:04,449 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:43:04] "DELETE /api/v2/orders/1 HTTP/1.1" 200 -
+2024-04-27 22:43:06,468 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:43:06] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:44:18,047 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:44:18,048 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:44:18,974 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:18] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:44:21,037 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:21] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:44:23,091 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:23] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:44:25,116 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:25] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:44:27,148 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:27] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:44:29,197 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 71, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'meal': 'макароны-3, котлета-3', 'person': 1, 'status': 'True', 'pause': 3}]]
+2024-04-27 22:44:29,208 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:29] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:44:31,253 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:31] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:44:33,309 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:33] "DELETE /api/v2/orders/1 HTTP/1.1" 200 -
+2024-04-27 22:44:35,348 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:44:35] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:45:53,172 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:45:53,173 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:46:07,203 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:46:07,203 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:49:31,054 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:49:31,054 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:52:34,329 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:52:34,329 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:52:39,588 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:52:39,588 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:52:52,633 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:52:52] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:52:54,658 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:52:54] "[33mGET /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:52:56,676 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:52:56] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:52:58,695 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:52:58] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:53:00,727 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:00] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:53:02,739 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 74, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'meal': 'макароны-3, котлета-3', 'person': 1, 'pause': 3, 'status': 'True'}]]
+2024-04-27 22:53:02,745 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:02] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:53:04,776 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:04] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:53:06,801 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:06] "[33mDELETE /api/v2/orders/1 HTTP/1.1[0m" 404 -
+2024-04-27 22:53:08,852 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:08] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:53:46,663 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:46] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:53:48,706 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:48] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 22:53:50,750 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:50] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:53:52,781 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:52] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:53:54,817 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:54] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:53:56,845 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 74, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'meal': 'макароны-3, котлета-3', 'person': 1, 'pause': 3, 'status': 'True'}]]
+2024-04-27 22:53:56,845 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:56] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:53:58,881 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:53:58] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:54:00,919 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:00] "DELETE /api/v2/orders/6 HTTP/1.1" 200 -
+2024-04-27 22:54:02,959 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:02] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:54:18,216 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:18] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:54:20,267 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:20] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 22:54:22,311 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:22] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:54:24,342 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:24] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:54:26,386 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:26] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:54:28,422 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:28] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:54:30,444 ERROR main Exception on /api/v2/orders [POST]
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+TypeError: Not a boolean value: 'True'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\flask_restful\__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\Serg\PycharmProjects\Flask_Project\data\orders_resource.py", line 74, in post
+    session.commit()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1824, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 2356, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    context = constructor(
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1457, in _init_compiled
+    l_param: List[Any] = [
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\engine\default.py", line 1459, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1970, in process
+    value = _strict_as_bool(value)
+  File "C:\Users\Serg\AppData\Roaming\Python\Python39\site-packages\sqlalchemy\sql\sqltypes.py", line 1942, in _strict_as_bool
+    raise TypeError("Not a boolean value: %r" % (value,))
+sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
+[SQL: INSERT INTO orders (person, meal, pause, status) VALUES (?, ?, ?, ?)]
+[parameters: [{'meal': 'макароны-3, котлета-3', 'person': 1, 'pause': 3, 'status': 'True'}]]
+2024-04-27 22:54:30,445 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:30] "[35m[1mPOST /api/v2/orders HTTP/1.1[0m" 500 -
+2024-04-27 22:54:32,464 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:32] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:54:34,487 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:34] "[33mDELETE /api/v2/orders/6 HTTP/1.1[0m" 404 -
+2024-04-27 22:54:36,508 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:54:36] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:55:29,066 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:29] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:55:31,112 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:31] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 22:55:33,157 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:33] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:55:35,186 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:35] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:55:37,222 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:37] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:55:39,270 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:39] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:55:41,309 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:41] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:55:43,336 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:43] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:55:45,384 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:45] "DELETE /api/v2/orders/6 HTTP/1.1" 200 -
+2024-04-27 22:55:47,422 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:55:47] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:57:36,847 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 22:57:36,847 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 22:57:42,552 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:42] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:57:44,580 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:44] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 22:57:46,614 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:46] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 22:57:48,646 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:48] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 22:57:50,671 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:50] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:57:52,713 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:52] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 22:57:54,748 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:54] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:57:56,770 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:56] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:57:58,797 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:57:58] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:58:00,852 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:00] "DELETE /api/v2/orders/6 HTTP/1.1" 200 -
+2024-04-27 22:58:02,871 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:02] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 22:58:20,336 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "GET / HTTP/1.1" 200 -
+2024-04-27 22:58:20,773 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-27 22:58:20,952 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "GET /static/img/photo.jpg HTTP/1.1" 200 -
+2024-04-27 22:58:20,956 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
+2024-04-27 22:58:21,282 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

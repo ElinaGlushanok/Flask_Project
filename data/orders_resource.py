@@ -1,6 +1,7 @@
 from flask import jsonify
 from data import db_session
 from data.static_data import *
+from data.users import User
 from data.orders import PersonalOrder
 from flask_restful import reqparse, abort, Resource
 
@@ -35,8 +36,8 @@ class OrdersResource(Resource):
 parser = reqparse.RequestParser()
 parser.add_argument('person', required=True, type=int)
 parser.add_argument('meal', required=True)
-parser.add_argument('pause', required=True)
-parser.add_argument('status', default=False)
+parser.add_argument('pause', required=True, type=int)
+parser.add_argument('status', default=False, type=bool)
 
 
 class OrdersListResource(Resource):
@@ -46,7 +47,7 @@ class OrdersListResource(Resource):
         return jsonify(
             {
                 'orders': [order.to_dict(only=('id', 'person', 'meal', 'pause', 'status'))
-                          for order in orders]
+                           for order in orders]
             })
 
     def post(self):
@@ -59,6 +60,9 @@ class OrdersListResource(Resource):
                 abort(400, message=f"Некорректно введены блюда")
         if len(set(meals.keys())) != len(meals.keys()):
             abort(400, message=f"Некорректно введены блюда")
+        users = session.get(User, args['person'])
+        if not users:
+            abort(400, message=f"Некорректно введен пользователь")
         orders = PersonalOrder(
             person=args['person'],
             meal=args['meal'],

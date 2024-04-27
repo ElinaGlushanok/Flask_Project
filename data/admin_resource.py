@@ -17,7 +17,6 @@ class AdminsResource(Resource):
         abort_if_user_not_found(admins_id)
         session = db_session.create_session()
         users = session.get(User, admins_id)
-        print(users)
         if users.grade == '-':
             return jsonify(
                 {

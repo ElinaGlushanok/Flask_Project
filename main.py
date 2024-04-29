@@ -151,9 +151,6 @@ def new_order():
             db_sess.add(orders)
             db_sess.commit()
             return redirect('/')
-        except ValueError:
-            return render_template('new_order.html', title='Создание заказа', meals=menu,
-                                   form=add_form, message="Пожалуйста, вводите блюда только из меню")
         except NameError:
             return render_template('new_order.html', title='Создание заказа', meals=menu,
                                    form=add_form, message="Пожалуйста, не вводите одинаковые блюда несколько раз")
@@ -183,15 +180,28 @@ def order_edit(unic_num):
         form.status.data = orders.status
     if form.validate_on_submit():
         db_sess = db_session.create_session()
-        orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
-        if orders and current_user.admin:
-            orders.meal = form.meal.data
-            orders.team_leader = form.pause.data
-            orders.status = form.status.data
-            db_sess.commit()
-            return redirect('/')
-        abort(404)
-    return render_template('new_order.html', title='Изменение заказа', form=form, meals=menu,)
+        try:
+            meals_ordered = form.meal.data.split(', ')
+            meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
+            for i in meals.keys():
+                if i.lower() not in meals_available:
+                    raise ValueError
+            if len(set(meals.keys())) != len(meals.keys()):
+                raise NameError
+            orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
+            if orders and current_user.admin:
+                orders.meal = form.meal.data
+                orders.team_leader = form.pause.data
+                orders.status = form.status.data
+                db_sess.commit()
+                return redirect('/')
+        except NameError:
+            return render_template('new_order.html', title='Создание заказа', meals=menu,
+                                   form=form, message="Пожалуйста, не вводите одинаковые блюда несколько раз")
+        except Exception:
+            return render_template('new_order.html', meals=menu,
+                                   title='Создание заказа', form=form, message="Неверный формат ввода блюд")
+    return render_template('new_order.html', title='Изменение заказа', form=form, meals=menu)
 
 
 @application.route('/delete_order/<int:unic_num>', methods=['GET', 'POST'])

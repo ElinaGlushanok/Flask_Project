@@ -15,7 +15,9 @@
 
 <br>{% if current_user.admin %}
 <div>
-    <a href="/orders/{{ order[0] }}" class="btn btn-warning">Внести изменения</a>
+    {% if not order[5] %}
+        <a href="/orders/{{ order[0] }}" class="btn btn-warning">Внести изменения</a>
+    {% endif %}
     <a href="/delete_order/{{ order[0] }}" class="btn btn-danger">Удалить заказ</a>
 </div>
 <br>

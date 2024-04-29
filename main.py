@@ -138,15 +138,20 @@ def new_order():
     add_form = NewOrderForm()
     if add_form.validate_on_submit():
         try:
+            if add_form.pause.data <= 0:
+                return render_template('new_order.html', title='Создание заказа', meals=menu,
+                                       form=add_form, message="Пожалуйста, введите корретную перемену")
             meals_ordered = add_form.meal.data.split(', ')
-            meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
+            meals = {elem.split('-')[0].lower(): int(elem.split('-')[1]) for elem in meals_ordered}
+            if any(i < 0 for i in meals.values()):
+                raise ValueError
             for i in meals.keys():
                 if i.lower() not in meals_available:
                     raise ValueError
             if len(set(meals.keys())) != len(meals.keys()):
                 raise NameError
             db_sess = db_session.create_session()
-            orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data, pause=add_form.pause.data,
+            orders = PersonalOrder(person=current_user.id, meal=add_form.meal.data.lower(), pause=add_form.pause.data,
                                    status=add_form.status.data)
             db_sess.add(orders)
             db_sess.commit()
@@ -157,8 +162,7 @@ def new_order():
         except Exception:
             return render_template('new_order.html', meals=menu,
                                    title='Создание заказа', form=add_form, message="Неверный формат ввода блюд")
-
-    return render_template('new_order.html', title='Создание заказа', form=add_form, meals=menu,)
+    return render_template('new_order.html', title='Создание заказа', form=add_form, meals=menu)
 
 
 @application.route("/show_menu")
@@ -180,9 +184,14 @@ def order_edit(unic_num):
         form.status.data = orders.status
     if form.validate_on_submit():
         db_sess = db_session.create_session()
+        if form.pause.data <= 0:
+            return render_template('new_order.html', title='Создание заказа', meals=menu,
+                                   form=form, message="Пожалуйста, введите корретную перемену")
         try:
             meals_ordered = form.meal.data.split(', ')
-            meals = {elem.split('-')[0]: int(elem.split('-')[1]) for elem in meals_ordered}
+            meals = {elem.split('-')[0].lower(): int(elem.split('-')[1]) for elem in meals_ordered}
+            if any(i < 0 for i in meals.values()):
+                raise ValueError
             for i in meals.keys():
                 if i.lower() not in meals_available:
                     raise ValueError
@@ -190,8 +199,8 @@ def order_edit(unic_num):
                 raise NameError
             orders = db_sess.query(PersonalOrder).filter(PersonalOrder.id == unic_num).first()
             if orders and current_user.admin:
-                orders.meal = form.meal.data
-                orders.team_leader = form.pause.data
+                orders.meal = form.meal.data.lower()
+                orders.pause = form.pause.data
                 orders.status = form.status.data
                 db_sess.commit()
                 return redirect('/')

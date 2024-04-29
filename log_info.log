@@ -2071,3 +2071,40 @@ sqlalchemy.exc.StatementError: (builtins.TypeError) Not a boolean value: 'True'
 2024-04-27 22:58:20,952 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "GET /static/img/photo.jpg HTTP/1.1" 200 -
 2024-04-27 22:58:20,956 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:20] "[36mGET /static/img/photo.jpg HTTP/1.1[0m" 304 -
 2024-04-27 22:58:21,282 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 22:58:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-27 23:09:07,726 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 23:09:07,726 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 23:09:13,113 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-27 23:09:13,113 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-04-27 23:09:21,907 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:21] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:09:23,941 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:23] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 23:09:25,993 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:25] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 23:09:28,024 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:28] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 23:09:30,049 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:30] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:09:32,089 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:32] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:09:34,120 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:34] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:09:36,155 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:36] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:09:38,179 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:38] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:09:40,214 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:40] "[33mDELETE /api/v2/orders/6 HTTP/1.1[0m" 404 -
+2024-04-27 23:09:42,242 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:42] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:09:47,050 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:47] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:09:49,077 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:49] "GET /api/v2/orders/4 HTTP/1.1" 200 -
+2024-04-27 23:09:51,115 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:51] "[33mGET /api/v2/orders/10 HTTP/1.1[0m" 404 -
+2024-04-27 23:09:53,133 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:53] "[33mGET /api/v2/orders/q HTTP/1.1[0m" 404 -
+2024-04-27 23:09:55,158 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:55] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:09:57,170 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:57] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:09:59,210 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:09:59] "[31m[1mPOST /api/v2/orders HTTP/1.1[0m" 400 -
+2024-04-27 23:10:01,264 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:10:01] "POST /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:10:03,297 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:10:03] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-27 23:10:05,333 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:10:05] "[33mDELETE /api/v2/orders/6 HTTP/1.1[0m" 404 -
+2024-04-27 23:10:07,368 INFO werkzeug 127.0.0.1 - - [27/Apr/2024 23:10:07] "GET /api/v2/orders HTTP/1.1" 200 -
+2024-04-29 15:44:33,863 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.103.170:5000
+2024-04-29 15:44:33,863 INFO werkzeug [33mPress CTRL+C to quit[0m
